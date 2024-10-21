@@ -1,5 +1,20 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["user"])) {
+    header("Location: login.php");
+    exit(); // Added exit to prevent further execution
+}
+include "db_conn.php";
+$sql = "SELECT * FROM user";
+$result = $conn->query($sql);
+
+$username = isset($_SESSION["first_name"]) ? $_SESSION["first_name"] : "Guest";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +22,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Contact Form to VCF</title>
 </head>
+
 <body>
-    <h1>Bitte geben Sie Ihre Kontaktinformationen:</h1>
+    <h1>Fügen Sie ein:</h1>
     <form action="generate_vcf.php" method="post">
         <label for="first_name">Vorname:</label><br>
         <input type="text" id="first_name" name="first_name" required><br>
@@ -28,7 +44,16 @@
         <label for="website">Website URL:</label><br>
         <input type="url" id="website" name="website"><br><br>
 
-        <input type="submit" value="Generate VCF">
+        <input type="submit" value="Generate VCF"><br><br>
     </form>
+    <a class="btn btn-danger" onclick="return myFunction()" href="logout.php">Logout</a>
+
+    <script>
+        function myFunction() {
+            return confirm("Do you really want to logout?");
+        }
+    </script>
+
 </body>
+
 </html>
