@@ -14,6 +14,7 @@ $username = isset($_SESSION["first_name"]) ? $_SESSION["first_name"] : "Guest";
 
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD:index.php
 
 <head>
     <meta charset="UTF-8">
@@ -25,25 +26,42 @@ $username = isset($_SESSION["first_name"]) ? $_SESSION["first_name"] : "Guest";
 
 <body>
     <h1>Fügen Sie ein:</h1>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Form to VCF</title>
+  </head>
+  <body>
+    <h1>Bitte geben Sie Ihre Kontaktinformationen:</h1>
+>>>>>>> 7016d10b4d0048b4ce355e35565d215a2259a7b2:index.html
     <form action="generate_vcf.php" method="post">
-        <label for="first_name">Vorname:</label><br>
-        <input type="text" id="first_name" name="first_name" required><br>
+      <label for="first_name">Vorname:</label><br />
+      <input type="text" id="first_name" name="first_name" required /><br />
 
-        <label for="last_name">Nachname:</label><br>
-        <input type="text" id="last_name" name="last_name" required><br>
+      <label for="last_name">Nachname:</label><br />
+      <input type="text" id="last_name" name="last_name" required /><br />
 
-        <label for="phone">Handy Nummer:</label><br>
-        <input type="text" id="phone" name="phone" required><br>
+      <label for="phone">Handy Nummer:</label><br />
+      <input type="text" id="phone" name="phone" required /><br />
 
-        <label for="email">Email Address:</label><br>
-        <input type="email" id="email" name="email" required><br>
+      <label for="email">Email Address:</label><br />
+      <input type="email" id="email" name="email" required /><br />
 
-        <label for="address">Address:</label><br>
-        <input type="text" id="address" name="address" required><br>
+      <label for="address">Address:</label><br />
+      <input type="text" id="address" name="address" required /><br />
 
-        <label for="website">Website URL:</label><br>
-        <input type="url" id="website" name="website"><br><br>
+      <label for="website">Website URL:</label><br />
+      <input type="url" id="website" name="website" /><br /><br />
 
+<<<<<<< HEAD:index.php
         <input type="submit" value="Generate VCF"><br><br>
     </form>
     <a class="btn btn-danger" onclick="return myFunction()" href="logout.php">Logout</a>
@@ -57,3 +75,9 @@ $username = isset($_SESSION["first_name"]) ? $_SESSION["first_name"] : "Guest";
 </body>
 
 </html>
+=======
+      <input type="submit" value="Generate VCF" />
+    </form>
+  </body>
+</html>
+>>>>>>> 7016d10b4d0048b4ce355e35565d215a2259a7b2:index.html
