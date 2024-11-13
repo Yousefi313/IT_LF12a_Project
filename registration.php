@@ -126,7 +126,8 @@ if (isset($_SESSION["user"])) {
             </div>
             <div class="form-group">
                 <!-- Input for password -->
-                <input type="password" class="form-control" name="password" placeholder="Password:" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters">
+                <!-- <input type="password" class="form-control" name="password" placeholder="Password:" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters"> -->
+                <input type="password" class="form-control" name="password" placeholder="Password:">
             </div>
             <div class="form-group">
                 <!-- Input for repeat password -->
