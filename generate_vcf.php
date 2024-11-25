@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header('Content-Length: ' . strlen($vcfData));
 
     // Output the VCF data
-    echo $vcfData;
+    echo $vcfData;  //It should be encoded using utf 8
     exit;
 }
 ?>
